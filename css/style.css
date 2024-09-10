@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Pikaday specific styles */
+input#datepicker {
+    cursor: pointer;
+}
+
+.pikaday {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1000; /* Ensure the calendar is above other elements */
+}
+
+.pikaday__day {
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pikaday__day:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.pikaday__day.pikaday--selected {
+    background-color: #0056b3;
+    color: white;
+}
+
+.pikaday__nav {
+    color: #007bff;
+}
+
+.pikaday__nav--prev, .pikaday__nav--next {
+    color: #007bff;
+}
+
+.pikaday__header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.pikaday__month {
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+.result {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #333;
+}
+
+.message {
+    text-align: center;
+    color: #d9534f;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
